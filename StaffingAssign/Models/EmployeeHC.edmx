@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ImportTressModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ImportTress.dbo.vIncidencias' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vIncidencias">
+          <Key>
+            <PropertyRef Name="CB_CODIGO" />
+            <PropertyRef Name="AU_FECHA" />
+            <PropertyRef Name="AU_TIPO" />
+            <PropertyRef Name="AU_TIPODIA" />
+            <PropertyRef Name="CB_TURNO" />
+            <PropertyRef Name="CB_PUESTO" />
+            <PropertyRef Name="CB_NIVEL4" />
+            <PropertyRef Name="CB_NIVEL6" />
+            <PropertyRef Name="PE_YEAR" />
+            <PropertyRef Name="PE_NUMERO" />
+            <PropertyRef Name="CB_NOMBRES" />
+            <PropertyRef Name="CB_APE_PAT" />
+            <PropertyRef Name="CB_APE_MAT" />
+            <PropertyRef Name="PU_DESCRIP" />
+          </Key>
+          <Property Name="CB_CODIGO" Type="int" Nullable="false" />
+          <Property Name="AU_FECHA" Type="datetime" Nullable="false" />
+          <Property Name="AU_TIPO" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="AU_TIPODIA" Type="smallint" Nullable="false" />
+          <Property Name="CB_TURNO" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="CB_PUESTO" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="CB_NIVEL4" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="CB_NIVEL6" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="PE_YEAR" Type="smallint" Nullable="false" />
+          <Property Name="PE_NUMERO" Type="smallint" Nullable="false" />
+          <Property Name="CB_NOMBRES" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CB_APE_PAT" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CB_APE_MAT" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="TB_ELEMENT" Type="nvarchar" MaxLength="30" />
+          <Property Name="PU_DESCRIP" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ImportTressModelStoreContainer">
+          <EntitySet Name="vIncidencias" EntityType="Self.vIncidencias" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vIncidencias].[CB_CODIGO] AS [CB_CODIGO], 
+    [vIncidencias].[AU_FECHA] AS [AU_FECHA], 
+    [vIncidencias].[AU_TIPO] AS [AU_TIPO], 
+    [vIncidencias].[AU_TIPODIA] AS [AU_TIPODIA], 
+    [vIncidencias].[CB_TURNO] AS [CB_TURNO], 
+    [vIncidencias].[CB_PUESTO] AS [CB_PUESTO], 
+    [vIncidencias].[CB_NIVEL4] AS [CB_NIVEL4], 
+    [vIncidencias].[CB_NIVEL6] AS [CB_NIVEL6], 
+    [vIncidencias].[PE_YEAR] AS [PE_YEAR], 
+    [vIncidencias].[PE_NUMERO] AS [PE_NUMERO], 
+    [vIncidencias].[CB_NOMBRES] AS [CB_NOMBRES], 
+    [vIncidencias].[CB_APE_PAT] AS [CB_APE_PAT], 
+    [vIncidencias].[CB_APE_MAT] AS [CB_APE_MAT], 
+    [vIncidencias].[TB_ELEMENT] AS [TB_ELEMENT], 
+    [vIncidencias].[PU_DESCRIP] AS [PU_DESCRIP]
+    FROM [dbo].[vIncidencias] AS [vIncidencias]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ImportTressModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="vIncidencias">
+          <Key>
+            <PropertyRef Name="CB_CODIGO" />
+            <PropertyRef Name="AU_FECHA" />
+            <PropertyRef Name="AU_TIPO" />
+            <PropertyRef Name="AU_TIPODIA" />
+            <PropertyRef Name="CB_TURNO" />
+            <PropertyRef Name="CB_PUESTO" />
+            <PropertyRef Name="CB_NIVEL4" />
+            <PropertyRef Name="CB_NIVEL6" />
+            <PropertyRef Name="PE_YEAR" />
+            <PropertyRef Name="PE_NUMERO" />
+            <PropertyRef Name="CB_NOMBRES" />
+            <PropertyRef Name="CB_APE_PAT" />
+            <PropertyRef Name="CB_APE_MAT" />
+            <PropertyRef Name="PU_DESCRIP" />
+          </Key>
+          <Property Name="CB_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="AU_FECHA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AU_TIPO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="AU_TIPODIA" Type="Int16" Nullable="false" />
+          <Property Name="CB_TURNO" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CB_PUESTO" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CB_NIVEL4" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CB_NIVEL6" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PE_YEAR" Type="Int16" Nullable="false" />
+          <Property Name="PE_NUMERO" Type="Int16" Nullable="false" />
+          <Property Name="CB_NOMBRES" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CB_APE_PAT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CB_APE_MAT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TB_ELEMENT" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PU_DESCRIP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ImportTressEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vIncidencias" EntityType="Self.vIncidencias" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ImportTressModelStoreContainer" CdmEntityContainer="ImportTressEntities">
+          <EntitySetMapping Name="vIncidencias">
+            <EntityTypeMapping TypeName="ImportTressModel.vIncidencias">
+              <MappingFragment StoreEntitySet="vIncidencias">
+                <ScalarProperty Name="CB_CODIGO" ColumnName="CB_CODIGO" />
+                <ScalarProperty Name="AU_FECHA" ColumnName="AU_FECHA" />
+                <ScalarProperty Name="AU_TIPO" ColumnName="AU_TIPO" />
+                <ScalarProperty Name="AU_TIPODIA" ColumnName="AU_TIPODIA" />
+                <ScalarProperty Name="CB_TURNO" ColumnName="CB_TURNO" />
+                <ScalarProperty Name="CB_PUESTO" ColumnName="CB_PUESTO" />
+                <ScalarProperty Name="CB_NIVEL4" ColumnName="CB_NIVEL4" />
+                <ScalarProperty Name="CB_NIVEL6" ColumnName="CB_NIVEL6" />
+                <ScalarProperty Name="PE_YEAR" ColumnName="PE_YEAR" />
+                <ScalarProperty Name="PE_NUMERO" ColumnName="PE_NUMERO" />
+                <ScalarProperty Name="CB_NOMBRES" ColumnName="CB_NOMBRES" />
+                <ScalarProperty Name="CB_APE_PAT" ColumnName="CB_APE_PAT" />
+                <ScalarProperty Name="CB_APE_MAT" ColumnName="CB_APE_MAT" />
+                <ScalarProperty Name="TB_ELEMENT" ColumnName="TB_ELEMENT" />
+                <ScalarProperty Name="PU_DESCRIP" ColumnName="PU_DESCRIP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

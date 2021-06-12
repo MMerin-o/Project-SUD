@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "UserLogin";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+
+<div class="row">
+    <div class="danger">
+        @ViewBag.Error
+    </div>
+    <form action="@Url.Content("~/UserAccess/UserLogin")" method="post">
+        <div>
+            <div class="form-group">
+                <img src="~/Content/Images/INTUITIVE_blue_RGB.png" class="img-responsive" width="300px" />
+            </div>
+            <div class="form-group">
+                <label>Windows ID</label>
+                <input type="text" name="user" />
+                
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Iniciar Sesi&oacute;n" class="btn btn-success"/>
+            </div>
+        </div>
+    </form>
+</div>

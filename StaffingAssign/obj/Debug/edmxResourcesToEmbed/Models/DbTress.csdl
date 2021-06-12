@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ImportTressModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="vIncidencias">
+    <Key>
+      <PropertyRef Name="CB_CODIGO" />
+      <PropertyRef Name="AU_FECHA" />
+      <PropertyRef Name="AU_TIPO" />
+      <PropertyRef Name="AU_TIPODIA" />
+      <PropertyRef Name="CB_TURNO" />
+      <PropertyRef Name="CB_PUESTO" />
+      <PropertyRef Name="CB_NIVEL4" />
+      <PropertyRef Name="CB_NIVEL6" />
+      <PropertyRef Name="PE_YEAR" />
+      <PropertyRef Name="PE_NUMERO" />
+      <PropertyRef Name="CB_NOMBRES" />
+      <PropertyRef Name="CB_APE_PAT" />
+      <PropertyRef Name="CB_APE_MAT" />
+      <PropertyRef Name="PU_DESCRIP" />
+    </Key>
+    <Property Name="CB_CODIGO" Type="Int32" Nullable="false" />
+    <Property Name="AU_FECHA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AU_TIPO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AU_TIPODIA" Type="Int16" Nullable="false" />
+    <Property Name="CB_TURNO" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CB_PUESTO" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CB_NIVEL4" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CB_NIVEL6" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PE_YEAR" Type="Int16" Nullable="false" />
+    <Property Name="PE_NUMERO" Type="Int16" Nullable="false" />
+    <Property Name="CB_NOMBRES" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CB_APE_PAT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CB_APE_MAT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TB_ELEMENT" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PU_DESCRIP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ImportTressEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="vIncidencias" EntityType="Self.vIncidencias" />
+  </EntityContainer>
+</Schema>
